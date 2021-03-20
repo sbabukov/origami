@@ -1,5 +1,7 @@
 import style from './Header.module.css'
 import NavigationItem from './NavigationItem';
+// link ще навигира без да презарежда страницата 
+import {Link, NavLink} from 'react-router-dom';
 
 const Header = () => {
 
@@ -22,17 +24,19 @@ const Header = () => {
   
   
           <NavigationItem>{<img src="white-origami-bird.png" alt="white-origami" />}</NavigationItem>
-          <NavigationItem>Going to 1</NavigationItem>
-          <NavigationItem>Going to 2</NavigationItem>
-          <NavigationItem>Going to 3</NavigationItem>
-          <NavigationItem>Going to 4</NavigationItem>
-          <NavigationItem>Going to 5</NavigationItem>
-          <NavigationItem>Going to 6</NavigationItem>
-          <NavigationItem>Going to 7</NavigationItem>
-          <NavigationItem>Going to 8</NavigationItem>
-          <NavigationItem>Going to 9</NavigationItem>
-          <NavigationItem>Going to 10</NavigationItem>
-          <NavigationItem>Going to 11</NavigationItem>
+          {/* Ако ни трябва активните линкове да се оцветяват се използва NavLink with  activeStyle={{backgroundColor: 'red'}} exact={true} */}
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/"><NavigationItem>Home</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about"><NavigationItem>About</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/contact-us"><NavigationItem>Contact Us Page</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/pesho"><NavigationItem>Pesho</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/gosho"><NavigationItem>Gosho</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/stamat"><NavigationItem>Going to 6</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/mariyka"><NavigationItem>Going to 7</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/malinka"><NavigationItem>Going to 8</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/tosho"><NavigationItem>Going to 9</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/plamen"><NavigationItem>Going to 10</NavigationItem></NavLink>
+          <NavLink activeStyle={{backgroundColor: 'red'}} exact={true} to="/about/veselin"><NavigationItem>Going to 11</NavigationItem></NavLink>
+
   
         </ul>
       </nav>
