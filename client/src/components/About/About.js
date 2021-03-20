@@ -21,7 +21,7 @@ const About = ({
     // console.log(match);
     return (<main className="main-container">
         {/* мача е деструктуриран */}
-        <h1>About {match.params.name} Page</h1>;
+        <h1>About {match.params.name} Page</h1>
 
         {/* използване на нестнат раут */}
         <Switch>
